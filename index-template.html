@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ='./assets/main.bundle.js'></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Interactive Video 1</title>
+</head>
+<body>
+   <div class="wrapper">
+    <div class="directions">Make sure to watch each video to completion before clicking the proceed button!</div>
+    <div id='h5p-container'></div>
+    <script>
+        const el = document.getElementById('h5p-container');
+        const options = {
+            h5pJsonPath:  '/h5p-folder',
+            frameJs: '/assets/frame.bundle.js',
+            frameCss: '/assets/styles/h5p.css',}
+            
+            new H5PStandalone.H5P(el, options);
+    </script>
+   </div>
+</body>
+</html>
