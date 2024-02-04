@@ -1,0 +1,933 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 12px;
+    --rami-red: #c42d24;
+    --rami-black: #2F3A45;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+/**************HEADER********************/
+
+#header {
+    position: relative;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#drop-btn {
+    margin-right: 5rem;
+    font-size: 2rem;
+}
+
+#logo {
+    height: 80px;
+    width: 80px;
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+#logo > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#navigation, #mobile-drop {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#mobile-drop {
+    position: absolute;
+    top: -200%;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    color: black;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0px 10px 13px 1px rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0px 10px 13px 1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0px 10px 13px 1px rgba(0,0,0,0.12);
+}
+
+#mobile-drop > li {
+    margin-bottom: 1rem;
+}
+
+#mobile-drop li a {
+    padding-left: 1rem;
+}
+
+#check {
+    display: none;
+}
+
+/***************HEADER**********************/
+
+
+
+/*****************scroll up button***********/
+
+#to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 5;
+    font-size: 2rem;
+    color: #fff;
+    background-color :var(--rami-black);
+    border: none;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*****************scroll up button*************/
+
+/*********Footer****************/
+
+#to-top:hover {
+    scale: 1.05;
+    transition: all ease-in .2s;
+}
+
+#footer {
+    padding: 2rem 5rem;
+    background-color: var(--rami-red);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer-socials > a > span:hover,
+#sitemap > ul > li:hover {
+    color: #2F3A45;
+}
+
+/*********Footer****************/
+
+/*********BANNER***************/
+
+#banner {
+    position: relative;
+    background-color: black;
+    background-image: url('../assets/pic1.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 5rem;
+}
+
+#banner-tint {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+
+#banner > h1 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color:#fff;
+    z-index: 1;
+}
+
+#banner > h1:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: rotateX(180deg); 
+    line-height: 5.2rem;
+    background: linear-gradient(0deg, #fff 0, transparent 70%);
+    background-clip: text;
+    color: transparent;
+}
+
+.red-text {
+    color: var(--rami-red);
+}
+
+.f-text {
+    color: #fff;
+}
+
+.k-text {
+    color: #000;
+}
+
+/*************BANNER END***********/
+
+
+/*************lightbox*************/
+
+#lightbox {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(0,0,0,.8);
+    display: none;
+}
+
+#lb-img-container {
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#lb-img-container::after {
+    content: '';
+    display: block;
+    padding-top: 100%; 
+}
+
+#lb-img-container > img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#lightbox.active {
+    display: block;
+}
+
+/*********************************/
+
+#content > article:not(:first-child) > h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+#content > article:not(:first-child) > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-wrap: balance;
+}
+
+#client-form, #employee-form {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+#client-form form, #employee-form form {
+    background-color: var(--rami-red);
+    box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.07);
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+#employee-form form {
+    background-color: var(--rami-black);
+    color: #fff;
+}
+
+#client-form legend, #employee-form legend {
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+}
+
+#client-form input, #client-form textarea, #employee-form input, #employee-form textarea {
+    font: inherit;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+form button {
+    font: inherit;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    scale: 1.05;
+    background-color: var(--rami-red);
+    transition: all .2s ease-in;
+    color: #fff;
+}
+
+fieldset {
+    border: none;
+}
+
+#employee-form  input[type="file"] {
+    display: none;
+}
+
+label[for="employee-resume"] {
+    background-color: #fff;
+    color: black;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+label[for="employee-resume"]:hover {
+    scale: 1.05;
+    background-color: var(--rami-red);
+    transition: all .2s ease-in;
+    color: #fff;
+}
+
+#map > iframe {
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 1rem;   
+    box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.07); 
+}
+
+
+@media only screen and (max-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+    }
+
+    #content {
+        display: grid;  
+        grid-template-rows: 90vh repeat(4, min-content);
+    }
+    
+    #navigation {
+        display: none;
+    }
+
+    #check:checked ~ #mobile-drop {
+        display: block;
+        top: 100%;
+    }    
+
+    #header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    #footer {
+        display: grid;
+        grid-template-rows: repeat(4, min-content);
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer-logo {
+        height: 150px;
+        width: 150px;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        justify-self: center;
+    }
+
+    #footer-logo > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #footer-socials {
+        font-size: 5rem;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        justify-self: center;
+    }
+
+    #contact {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    #contact > div:nth-child(2) {
+        margin-top: .5rem;
+    }
+
+    #footer-desc {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        margin-top: 1rem;
+    }
+
+    #sitemap {
+        grid-row: 3/4;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    #sitemap > ul > li:first-child {
+        font-size: 1.3rem;
+        font-family: Roboto, sans-serif;
+    }
+
+    #sitemap > ul > li {
+        margin-bottom: .2rem;
+    }
+
+    #sitemap > ul > li:last-child {
+        margin-bottom: .5rem;
+    }
+
+    #copyright {
+        margin-top: 2rem;
+        grid-row: 4/5;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        text-align: center;
+    }
+
+    #content > article:not(:first-child) {
+        padding: 0px 3rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    /*********************************/
+        
+    #client-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .fieldset-textarea > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form  textarea {
+        height: 300px;
+    }
+
+    /************EMP***************/
+    #employee-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .fieldset-textarea > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #resume > div {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+    }
+
+    #content {
+        display: grid;  
+        grid-template-rows: 100vh repeat(4, min-content);
+    }
+
+    #navigation {
+        display: none;
+    }
+
+    #check:checked ~ #mobile-drop {
+        display: block;
+        top: 100%;  
+    }
+
+    #banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer {
+        display: grid;
+        grid-template-rows: repeat(4, min-content);
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer-logo {
+        height: 150px;
+        width: 150px;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        justify-self: center;
+    }
+
+    #footer-logo > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #footer-socials {
+        font-size: 5rem;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        justify-self: center;
+    }
+
+    #contact {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    #contact > div:nth-child(2) {
+        margin-top: .5rem;
+    }
+
+    #footer-desc {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        margin-top: 1rem;
+    }
+
+    #sitemap {
+        grid-row: 3/4;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    #sitemap > ul > li:first-child {
+        font-size: 1.3rem;
+        font-family: Roboto, sans-serif;
+    }
+
+    #sitemap > ul > li {
+        margin-bottom: .2rem;
+    }
+
+    #sitemap > ul > li:last-child {
+        margin-bottom: .5rem;
+    }
+
+    #copyright {
+        margin-top: 2rem;
+        grid-row: 4/5;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        text-align: center;
+    }
+
+    #header {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    #content > article:not(:first-child) {
+        padding: 0 5rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+
+    /**********************************************/
+
+    #client-form form {
+        display: grid;
+        grid-template-rows: repeat(4, min-content);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #client-form form > fieldset:not(:nth-child(3)) {
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: 1rem;
+       
+    }
+
+    #client-form form > fieldset:not(:nth-child(3)) > div {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    #client-form form > fieldset:not(:nth-child(3)) > div > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #client-form form > fieldset:not(:nth-child(3)) > div > div > label {
+        align-self: start;
+    }
+
+    .fieldset-textarea > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fieldset-textarea > div > textarea {
+        height: 300px;
+    }
+
+    /*************EMP**************************/
+    
+    #employee-form form {
+        display: grid;
+        grid-template-rows: repeat(5, min-content);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #employee-form form > fieldset:not(:nth-child(3)):not(:nth-child(4)) {
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: 1rem;
+       
+    }
+
+    #employee-form form > fieldset:not(:nth-child(3)):not(:nth-child(4)) > div {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    #employee-form form > fieldset:not(:nth-child(3)) > div > div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #employee-form form > fieldset:not(:nth-child(3)) > div > div > label {
+        align-self: start;
+    }
+
+    .fieldset-textarea > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fieldset-textarea > div > textarea {
+        height: 300px;
+    }
+
+    #resume > div {
+        margin-top: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 993px) {
+    #drop-btn {
+        display: none;
+    }
+
+    #navigation {
+        margin-right: 5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #navigation > ul {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+    }
+
+    .nav-links {
+        position: relative; 
+    }
+
+    .nav-links > label {
+        cursor: pointer;
+    }
+
+    .nav-links > label:hover {
+        color: var(--rami-red);
+    }
+
+    #to-top.visible {
+        display: block;
+    }
+    
+    .visible {
+        display: block;
+    }
+
+    .nav-check {
+        display: none;
+    }
+
+    .nav-links-drop {
+        position: absolute;
+        z-index: 100;   
+        background-color: var(--rami-red);
+        color: #fff;
+        text-transform: none;
+        border-radius: 10px;
+        transform: translateY(5%);
+        display: none;
+    }
+
+    .nav-links-drop div {
+        padding: 1rem 3rem;
+        border-bottom: 1px solid #a02720;
+    }
+
+    .nav-links-drop > div:first-child {
+        padding-top: 1rem;
+    }
+    
+    .nav-links-drop > div:last-child {
+        padding-bottom: 1rem;
+        border-bottom: none;
+    }
+    
+    .nav-check:checked ~ .nav-links-drop {
+        display: block;
+    }
+
+    #content {
+        display: grid;
+        grid-template-rows: 100vh repeat(4, min-content);
+    }
+
+    #footer {
+        display: grid;
+        grid-template:
+        'logo sitemap socials' 1fr
+        'desc sitemap socials' 1fr
+        'cpr cpr cpr' min-content
+        /1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #footer-logo {
+        grid-area: logo;
+        height: 180px;
+        width: 180px;
+    }
+
+    #footer-logo > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #footer-socials {
+        grid-area: socials;
+    }
+   
+    #footer-socials > a {
+        font-size: 5rem;
+    }
+
+    #contact > div > span {
+        margin-right: 1rem;
+    }
+
+    #contact > div {
+        font-size: 1.2rem;
+    }
+
+    #contact > div:nth-child(2) {
+        margin-top: 1rem;
+    }
+
+    #footer-desc {
+        grid-area: desc;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #sitemap {
+        grid-area: sitemap;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        
+    }
+
+    #sitemap > ul > li:first-child {
+        font-size: 2rem;
+        font-family: roboto, sans-serif;
+    }
+
+    #sitemap > ul > li:not(:first-child) {
+        font-size: 1.5rem;
+    }
+
+    #copyright {
+       grid-area: cpr;
+       display: flex;
+       gap: 1rem;
+    }
+
+    #content > article:not(:first-child) {
+        padding: 0px 5rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    /********************************************/
+
+    #client-form form {
+        display: grid;
+        grid-template-rows: repeat(4, min-content);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #client-form fieldset {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #client-form fieldset > legend {
+        float: left;
+    }
+    
+    #client-form fieldset:not(:nth-child(3)) > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    #client-form fieldset:not(:nth-child(3)) > div > div,  #client-form fieldset:nth-child(3) > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #client-form fieldset:not(:nth-child(3)) > div > div > label, #client-form fieldset:nth-child(3) > div > label {
+        align-self: start;
+    }
+
+    #client-form fieldset textarea {
+        height: 300px;
+    }
+
+    #client-form form > div:last-of-type {
+        justify-self: end;
+    }
+    
+    /*****************EMP****************************/
+
+    #employee-form form {
+        display: grid;
+        grid-template-rows: repeat(5, min-content);
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    #employee-form fieldset {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #employee-form fieldset > legend {
+        float: left;
+    }
+
+    #employee-form fieldset:not(:nth-child(3)):not(:nth-child(4)) > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    #employee-form fieldset:not(:nth-child(3)):not(:nth-child(4)) > div > div,  #employee-form fieldset:nth-child(3) > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #employee-form fieldset:not(:nth-child(3)):not(:nth-child(4)) > div > div > label,  #employee-form fieldset:nth-child(3) > div > label {
+        align-self: start;
+    }
+
+    #employee-form textarea {
+        height: 300px;
+    }
+
+    #employee-form form > div:last-of-type {
+        justify-self: end;
+    }
+
+    
+
+}

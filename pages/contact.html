@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedAnts Media: About</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../utils/aos-master/dist/aos.css">
+    <script src="../utils/aos-master/dist/aos.js"></script>
+    <script src="../utils/drop/drop.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <button id="to-top"><span class="fa fa-caret-up"></span></button>
+        <header id="header">
+            <div id="logo">
+                <img src="../assets/rami-logo.png" alt="">
+            </div>
+            <label for="check" id="drop-btn">
+                <span class="fa fa-bars"></span>
+            </label>
+            <nav id="navigation">
+                <ul class="nav-links">
+                    <a href="../index.html">Home</a>
+                </ul>
+                <ul class="nav-links">
+                    <label for="nav-check2">who we are <span class="fa fa-caret-down"></span></label>
+                    <input type="checkbox" id="nav-check2" class="nav-check">
+                    <li class="nav-links-drop">
+                        <div><a href="./about.html">Who We Are</a></div>
+                        <div><a href="./about.html#history">Our Story</a></div>
+                        <div><a href="./about.html#vision-mission">Vision-Mission</a></div>
+                        <div><a href="./about.html#services">Services</a></div>
+                        <div><a href="./about.html#points-of-clarity">Points Of Clarity</a></div>
+                    </li>
+                </ul>
+                <ul class="nav-links">
+                    <label for="nav-check3">what we do <span class="fa fa-caret-down"></span></label>
+                    <input type="checkbox" id="nav-check3" class="nav-check">
+                    <li class="nav-links-drop">
+                        <div><a href="./portfolio.html">Our Work</a></div>
+                        <div><a href="./portfolio.html#clients">5 Essences</a></div>
+                        <div><a href="./portfolio.html#gallery">Previous Successes</a></div>
+                        <div><a href="./portfolio.html#jobs">Employment Types</a></div>
+                    </li>
+                </ul>
+                <ul class="nav-links">
+                    <label for="nav-check4" style="color: #c42d24">get in touch <span class="fa fa-caret-down"></span></label>
+                    <input type="checkbox" id="nav-check4" class="nav-check">
+                    <li class="nav-links-drop">
+                        <div><a href="./contact.html">Reach Out</a></div>
+                        <div><a href="./contact.html#client-form">For Clients</a></div>
+                        <div><a href="./contact.html#employee-form">For Work</a></div>
+                    </li>
+                </ul>
+            </nav>
+            
+            <input type="checkbox" id="check">
+            <ul id="mobile-drop">
+                <li>
+                    <span class='fa fa-home'></span>
+                    <a href="../index.html">home</a>
+                </li>
+                <li>
+                    <span class="fa fa-group"></span>
+                    <a href="./about.html">who we are</a>
+                </li>
+                <li>
+                    <span class="fa fa-briefcase"></span>
+                    <a href="./portfolio.html">what we do</a>
+                </li>
+                <li>
+                    <span class="fa fa-comments"></span>
+                    <a href="./contact.html">get in touch</a>
+                </li>
+            </ul>
+        </header>
+
+        <section id="content">
+            <article id="banner">
+                <div id="banner-tint"></div>
+                <h1 data-text="REACH OUT" data-aos="fade">REACH OUT</h1>
+            </article>
+            <article id="client-form">
+                <h1 data-aos="fade-right">Be part of our story</h1>
+                <p data-aos="zoom-in-left">At RedAnts Media, we welcome your inquiries, feedback, and collaboration proposals. Our dedicated team is ready to assist you in bringing your vision to life. Whether you have a specific project in mind or simply want to explore the possibilities of working together, we're here for you. Please fill out the form below, and we'll get back to you promptly. Let's embark on a journey of creativity, innovation, and success together.</p>
+                <form action="foo">
+                    <fieldset data-aos="fade-right">
+                        <legend>Name <span class="fa fa-address-card"></span></legend>
+                        <div>
+                            <div>
+                                <label for="client-fname">First</label>
+                                <input type="text" id="client-fname" required></div>
+                            <div>
+                                <label for="client-lname">Last</label>
+                                <input type="text" id="client-lname" required></div>
+                        </div>
+                    </fieldset>
+                    <fieldset  data-aos="zoom-in-left">
+                        <legend>
+                            Contact <span class="fa fa-envelope"></span>
+                        </legend>
+                        <div>
+                            <div>
+                                <label for="client-email" >E-mail</label>
+                                <input type="email" id="client-email" required>
+                            </div>
+                            <div>
+                                <label for="client-number">Contact Number</label>
+                                <input type="text" id="client-number" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset data-aos="fade-right" class="fieldset-textarea">
+                        <legend>Message <span class="fa fa-comment"></span></legend>
+                        <div>
+                            <label for="client-message">Your Message</label>
+                            <textarea name="" id="client-message" required></textarea>
+                        </div>
+                    </fieldset>
+                    <div data-aos="fade-up">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Clear</button>
+                    </div>
+                </form>
+            </article>
+            <article id="employee-form">
+                <h1 data-aos="fade-right">or help us build the story</h1>
+                <p data-aos="zoom-in-left">Are you passionate about creativity, innovation, and making a significant impact? At RedAnts Media, we believe in fostering a dynamic work environment that encourages talent, collaboration, and growth. If you're ready to embark on a rewarding journey and contribute to our vision of excellence in corporate video production and event management, we want to hear from you. Explore exciting career opportunities with us by submitting your details through the form below.</p>
+                <form action="foo">
+                    <fieldset data-aos="fade-right">
+                        <legend>Name <span class="fa fa-address-card"></span></legend>
+                        <div>
+                            <div>
+                                <label for="emp-fname">First</label>
+                                <input type="text" id="emp-fname" required></div>
+                            <div>
+                                <label for="emp-lname">Last</label>
+                                <input type="text" id="emp-lname" required></div>
+                        </div>
+                    </fieldset>
+                    <fieldset  data-aos="zoom-in-left">
+                        <legend>
+                            Contact <span class="fa fa-envelope"></span>
+                        </legend>
+                        <div>
+                            <div>
+                                <label for="emp-email" >E-mail</label>
+                                <input type="email" id="emp-email" required>
+                            </div>
+                            <div>
+                                <label for="emp-number">Contact Number</label>
+                                <input type="text" id="emp-number" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset data-aos="fade-right" class="fieldset-textarea">
+                        <legend>About You <span class="fa fa-comment"></span></legend>
+                        <div>
+                            <label for="emp-message">Your Details</label>
+                            <textarea name="" id="emp-message" required></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset id="resume" data-aos="zoom-in-left">
+                        <legend>Resume <span class="fa fa-user-circle"></span></legend>
+                        <div>
+                            <label for="employee-resume">Upload Your Resume</label>
+                            <input type="file" id="employee-resume">
+                        </div>
+                    </fieldset>
+                    <div data-aos="fade-up">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Clear</button>
+                    </div>
+                </form>
+            </article>
+
+            <article id="map">
+                <h1>where to find us</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15439.068019989463!2d121.0193067!3d14.6691598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6c2f9d5bb5f%3A0xf408b6418b7c3320!2sREDANTS%20MEDIA%20INC.!5e0!3m2!1sen!2sph!4v1707029573758!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+            
+        </section>
+
+        <footer id="footer" data-aos="fade-up">
+            <div id="footer-logo">
+                <img src="../assets/rami-logo2.png" alt="">
+            </div>
+            <div id="footer-socials">
+                <a href="https://www.facebook.com/redantsmediainc/">
+                    <span class="fa fa-facebook-official"></span>
+                </a>
+                <a href="https://www.instagram.com/explore/tags/redantsmedia/?hl=en">
+                    <span class="fa fa-instagram"></span>
+                </a>
+                <div id="contact">
+                    <div><span class="fa fa-envelope"></span>wannabite@redantsmediainc.com</div>
+                    <div><span class="fa fa-phone"></span>(02) 7215 - 03 23</div>
+                </div>
+            </div>
+            <div id="footer-desc">
+                <p>RedAnts Media Inc. provides creative services, media production, and event production aiming to fulfil the needs of our clients.  We strive to be effective and efficient with our extended minds, hands, and legs in weaving your brand's story through multimedia communication.
+                </p>
+            </div>
+            <div id="sitemap">
+               <ul>
+                <li><a href="../index.html">Home</a></li>
+               </ul>
+               <ul>
+                <li><a href="./about.html">Who We Are</a></li>
+                <li><a href="./about.html#history">Our Story</a></li>
+                <li><a href="./about.html#vision-mission">Vision-Mission</a></li>
+                <li><a href="./about.html#services">Services</a></li>
+                <li><a href="./about.html#points-of-clarity">Points Of Clarity</a></li>
+               </ul>
+               <ul>
+                <li><a href="./portfolio.html">Our Work</a></li>
+                <li><a href="./portfolio.html#clients">5 Essences</a></li>
+                <li><a href="./portfolio.html#gallery">Previous Successes</a></li>
+                <li><a href="./portfolio.html#jobs">Employment Types</a></li>
+               </ul>
+               <ul>
+                <li><a href="./contact.html">Reach Out</a></li>
+                <li><a href="./contact.html#client-form">For Clients</a></li>
+                <li><a href="./contact.html#employee-form">For Work</a></li>
+               </ul>
+            </div>
+            <div id="copyright">
+                <div><span class="fa fa-copyright"></span>All rights reserved, RedAnts Media Inc. 2024</div>
+                <p>Site created by Ace Chan</p>
+            </div>
+        </footer>
+
+    </div>
+    <div id="lightbox">
+        <div id="lb-img-container"></div>
+    </div>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
